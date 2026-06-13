@@ -1,4 +1,4 @@
-
+# 🚲 Bicycle Manufacturer Performance Analysis
 
 ![SQL](https://img.shields.io/badge/Language-SQL-3776AB?style=flat-square&logo=sql&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)
@@ -9,7 +9,7 @@
 <p align="center">
   <img src="Images/main_banner.jpg" width="100%">
 </p>
-# 🚲 Bicycle Manufacturer Performance Analysis
+
 
 🚲 Bicycle Manufacturer Performance Analysis | SQL
 Analyze sales, inventory, and purchasing data to answer 8 business questions and turn raw data into clear insights.
