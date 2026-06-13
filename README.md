@@ -218,7 +218,8 @@ SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 ![Query 3 Output](Images/Query_3_Output.png)
 
 **💡 Observations:**
-> _(To be updated after output review)_
+
+_Territory 4 ranked #1 every year from 2011–2014, with Territory 6 and Territory 1 consistently holding #2 and #3_
 
 </details>
 
