@@ -81,9 +81,9 @@ Below are all 8 queries with their business context, SQL code, output, and obser
 <details>
 <summary><b>Query 1: Sales Volume L12M</b> (Click to expand)</summary>
 
-**Question: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M.**
+*Question: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M.*
 
-*Tracking the last 12 months of sales by subcategory helps the business spot which product lines are growing or declining in real time - so inventory and marketing budgets can be adjusted before it's too late.*
+**Tracking the last 12 months of sales by subcategory helps the business spot which product lines are growing or declining in real time - so inventory and marketing budgets can be adjusted before it's too late.**
 
 ```sql
 WITH
@@ -127,16 +127,16 @@ ORDER BY total_sales DESC, product_subcategory;
 
 *💡 Observations:*
 
-> _Road Bikes, Touring Bikes, and Mountain Bikes consistently dominate both revenue and order volume across all months — with Road Bikes peaking at $2.1M in Mar 2014 alone._
+> _Road Bikes, Touring Bikes, and Mountain Bikes consistently dominate both revenue and order volume across all months - with Road Bikes peaking at $2.1M in Mar 2014 alone._
 
 </details>
 
 <details>
 <summary><b>Query 2: YoY Growth Rate by Category</b> (Click to expand)</summary>
 
-**Question: Calc % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal.**
+*Question: Calc % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal.*
 
-*Identifying the top 3 fastest-growing subcategories gives leadership a clear signal of where demand is heading - useful for production planning and deciding where to invest next.*
+**Identifying the top 3 fastest-growing subcategories gives leadership a clear signal of where demand is heading - useful for production planning and deciding where to invest next.**
 
 ```sql
 WITH
@@ -190,9 +190,9 @@ FROM qty_growth WHERE growth_rank <= 3 ORDER BY qty_diff DESC;
 <details>
 <summary><b>Query 3: Top Territories by Year</b> (Click to expand)</summary>
 
-**Question: Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number.**
+*Question: Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number.*
 
-*Knowing which territories consistently drive the most orders helps the sales team prioritize regional resources and flag underperforming areas that may need support.*
+**Knowing which territories consistently drive the most orders helps the sales team prioritize regional resources and flag underperforming areas that may need support.**
 
 ```sql
 WITH 
@@ -227,9 +227,9 @@ SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 <details>
 <summary><b>Query 4: Seasonal Discount Efficiency</b> (Click to expand)</summary>
 
-**Question: Calc Total Discount Cost belongs to Seasonal Discount for each SubCategory.**
+*Question: Calc Total Discount Cost belongs to Seasonal Discount for each SubCategory.*
 
-*Calculating the total cost of seasonal discounts per subcategory lets the finance team evaluate whether the promotions are worth the margin loss - and which categories are eating the most discount budget.*
+**Calculating the total cost of seasonal discounts per subcategory lets the finance team evaluate whether the promotions are worth the margin loss - and which categories are eating the most discount budget.**
 
 ```sql
 WITH
@@ -266,9 +266,9 @@ FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 <details>
 <summary><b>Query 5: Cohort Retention Rate</b> (Click to expand)</summary>
 
-**Question: Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis).**
+*Question: Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis).*
 
-*Cohort retention shows exactly when customers stop coming back after their first purchase - giving the CRM team a window to step in with re-engagement campaigns before churn becomes permanent.*
+**Cohort retention shows exactly when customers stop coming back after their first purchase - giving the CRM team a window to step in with re-engagement campaigns before churn becomes permanent.**
 
 ```sql
 WITH successful_order AS (
@@ -299,16 +299,16 @@ FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY m
 
 **💡 Observations:**
 
-> _Retention drops sharply after the first month — cohort 1 went from 2,076 customers at M-0 down to just 78 at M-1, a ~96% drop-off. Most cohorts follow the same pattern_
+> _Retention drops sharply after the first month - cohort 1 went from 2,076 customers at M-0 down to just 78 at M-1, a ~96% drop-off. Most cohorts follow the same pattern_
 
 </details>
 
 <details>
 <summary><b>Query 6: Stock Trend MoM</b> (Click to expand)</summary>
 
-**Question: Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal.**
+*Question: Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal.*
 
-*Month-over-month stock changes reveal whether inventory is building up or running low for each product - helping the warehouse team avoid both overstock and stockout situations.*
+**Month-over-month stock changes reveal whether inventory is building up or running low for each product - helping the warehouse team avoid both overstock and stockout situations.**
 
 ```sql
 WITH
@@ -343,9 +343,9 @@ ORDER BY a.stock_qty DESC;
 <details>
 <summary><b>Query 7: Stock-to-Sales Ratio</b> (Click to expand)</summary>
 
-**Question: Calc Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal.**
+*Question: Calc Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal.*
 
-*A high stock-to-sales ratio means the company is holding more inventory than it's selling - tying up cash. This query flags which products need faster turnover or reduced production.*
+**A high stock-to-sales ratio means the company is holding more inventory than it's selling - tying up cash. This query flags which products need faster turnover or reduced production.**
 
 ```sql
 WITH 
