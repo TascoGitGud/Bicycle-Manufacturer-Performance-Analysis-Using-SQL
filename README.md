@@ -11,7 +11,7 @@
 </p>
 
 
-## 1. 📌 Overview
+## 📌 Overview
 
 **Objective:**
 
@@ -32,15 +32,15 @@ This project uses SQL to analyze sales, inventory, and purchasing data from Adve
 
 ### 📑 Table of Contents
 
-- [1. Overview](#1-overview)
-- [2. Dataset](#2-dataset)
-- [3. Full Query Repository](#3-full-query-repository)
-- [4. Project Structure](#4-project-structure)
-- [5. Setup Instructions](#5-setup-instructions)
+- [📌 Overview](#1-overview)
+- [📂 Dataset](#2-dataset)
+- [🔎 Query Repository](#3-full-query-repository)
+- [🗂️ Project Structure](#4-project-structure)
+- [🚀 Setup Instructions](#5-setup-instructions)
 
 ---
 
-## 2. 📂 Dataset
+## 📂 Dataset
 
 The analysis is based on the **AdventureWorks database**, which represents a large bicycle manufacturing and sales company operating internationally. It contains data on products, customers, sales orders, purchasing, and inventory across many regions.
 
@@ -63,7 +63,7 @@ To answer the 8 business questions in this project, **8 tables** from the `Sales
 
 ---
 
-## 3. 🔎 Full Query Repository
+## 🔎 Query Repository
 
 Below are all 8 queries with their logic and a sample of the results returned in BigQuery.
 
@@ -345,7 +345,7 @@ GROUP BY 1,2;
 
 ---
 
-## 4. 🗂️ Project Structure
+## 🗂️ Project Structure
 
 ```text
 Bicycle_Manufacturer_Performance_Analysis-main/
@@ -373,7 +373,7 @@ Bicycle_Manufacturer_Performance_Analysis-main/
 
 ---
 
-## 5. 🚀 Setup Instructions
+## 🚀 Setup Instructions
 
 To run these queries in **Google BigQuery**:
 
