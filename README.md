@@ -376,14 +376,14 @@ ORDER BY 1 DESC, 7 DESC;
 ![Query 7 Output](Images/Query_7_Output.png)
 
 **💡 Observations:**
-> _(To be updated after output review)_
+> _In Dec 2011, HL Mountain Frame variants show the highest stock-to-sales ratios (up to 27x), meaning the company is holding far more inventory than it's selling_
 
 </details>
 
 <details>
 <summary><b>Query 8: Pending Orders Breakdown</b> (Click to expand)</summary>
 
-*Question: No of order and value at Pending status in 2014.*
+*_Question: No of order and value at Pending status in 2014._*
 
 **Pending purchase orders represent committed but undelivered spend - tracking their total value helps the procurement team manage cash flow and follow up with suppliers before delays impact production.**
 
@@ -403,7 +403,7 @@ GROUP BY 1,2;
 ![Query 8 Output](Images/Query_8_Output.png)
 
 **💡 Observations:**
-> _(To be updated after output review)_
+> _As of 2014, there are 224 pending purchase orders totaling ~$9.27M in undelivered spend_
 
 </details>
 
