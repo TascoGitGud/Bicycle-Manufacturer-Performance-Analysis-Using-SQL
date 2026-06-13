@@ -332,7 +332,7 @@ ORDER BY a.stock_qty DESC;
 ```
 
 **📊 Actual Output:**
-![Query 6 Output](Images/Query_6_Output.png)
+![Query 6 Output](Images/Query_06_Output.png)
 
 **💡 Observations:**
 > _(To be updated after output review)_
@@ -413,7 +413,7 @@ GROUP BY 1,2;
 ```text
 Bicycle_Manufacturer_Performance_Analysis-main/
 ├── Images/                             # Screenshots of each query's result
-│   ├── banner.jpg
+│   ├── main_banner.jpg
 │   ├── Query_1_Output.jpg
 │   ├── Query_2_Output.jpg
 │   ├── Query_3_Output.jpg
