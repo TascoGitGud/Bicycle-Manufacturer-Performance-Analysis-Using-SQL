@@ -6,6 +6,11 @@
 
 ---
 
+<p align="center">
+  <img src="images/banner.jpg" width="100%">
+</p>
+
+
 ## 1. Overview
 
 This project main goal is to demonstrate advanced SQL capabilities in solving complex business problems for AdventureWorld dataset.
