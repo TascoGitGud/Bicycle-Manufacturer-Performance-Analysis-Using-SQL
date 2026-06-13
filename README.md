@@ -367,7 +367,7 @@ To run these queries in **Google BigQuery**:
 2. **Load the dataset:** You'll need the `adventureworks2019` dataset. CSV exports of the open-source Microsoft AdventureWorks database are available online. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
 3. **Clone this repository:**
 ```bash
-git clone https://github.com/hdangnguyen/Bicycle_Manufacturer_Performance_Analysis.git
-cd Bicycle_Manufacturer_Performance_Analysis
+[git clone https://github.com/hdangnguyen/Bicycle_Manufacturer_Performance_Analysis.git
+cd Bicycle_Manufacturer_Performance_Analysis](https://github.com/TascoGitGud/Bicycle-Manufacturer-Performance-Analysis-Using-SQL.git)
 ```
 4. **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
