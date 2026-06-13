@@ -257,6 +257,7 @@ FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 ![Query 4 Output](Images/Query_4_Output.png)
 
 **💡 Observations:**
+
 _Helmets is the only subcategory receiving seasonal discounts, with discount cost doubling from $828 in 2012 to $1,606 in 2013._
 
 </details>
@@ -296,7 +297,8 @@ FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY m
 ![Query 5 Output](Images/Query_5_Output.png)
 
 **💡 Observations:**
-> _(To be updated after output review)_
+
+_Retention drops sharply after the first month — cohort 1 went from 2,076 customers at M-0 down to just 78 at M-1, a ~96% drop-off. Most cohorts follow the same pattern_
 
 </details>
 
