@@ -13,7 +13,7 @@
 
 ## 1. Overview
 
-This project main goal is to demonstrate advanced SQL capabilities in solving complex business problems for **AdventureWorld dataset**.
+This project was built to practice and showcase SQL skills by solving real-world business questions using the **AdventureWorks dataset**.
 
 ### Table of Contents
 
@@ -27,30 +27,30 @@ This project main goal is to demonstrate advanced SQL capabilities in solving co
 
 ## 2. Dataset
 
-This project is an end-to-end data analysis performed on the **AdventureWorks database**, a comprehensive dataset simulating a large multinational manufacturing company. The business operates across multiple international regions, managing thousands of products, salespeople, and complex supply chain records.
+The analysis is based on the **AdventureWorks database**, which represents a large bicycle manufacturing and sales company operating internationally. It contains data on products, customers, sales orders, purchasing, and inventory across many regions.
 
 ### Data Dictionary
 
-To execute the 8 operational queries in this project, I utilized **8 tables** across the `Sales`, `Production`, and `Purchasing` schemas. Below is a targeted data dictionary of the exact fields used in my analysis. 
+To answer the 8 business questions in this project, **8 tables** from the `Sales`, `Production`, and `Purchasing` schemas were used. The table below lists only the columns that were actually used.
 
-> 🔗 **Full Documentation:** For the complete, un-abridged Data Dictionary of the entire AdventureWorks dataset, please refer to the [Official Data Dictionary (PDF)](https://drive.google.com/file/d/1bwwsS3cRJYOg1cvNppc1K_8dQLELN16T/view).
+> 🔗 **Full Documentation:** For the complete Data Dictionary of the entire AdventureWorks dataset, see the [Official Data Dictionary (PDF)](https://drive.google.com/file/d/1bwwsS3cRJYOg1cvNppc1K_8dQLELN16T/view).
 
-| Schema | Table Name | Columns Used in Queries | Business Purpose in Analysis |
+| Schema | Table Name | Columns Used | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Sales** | `SalesOrderHeader` | `SalesOrderID`, `OrderDate`, `CustomerID`, `TerritoryID`, `Status`, `ModifiedDate` | Base table for tracking cohort timelines, territory performance, and successful conversions. |
-| **Sales** | `SalesOrderDetail` | `SalesOrderID`, `ProductID`, `OrderQty`, `LineTotal`, `UnitPrice`, `SpecialOfferID` | Fact table for aggregating total demand, volume, and revenue. |
-| **Sales** | `SpecialOffer` | `SpecialOfferID`, `DiscountPct`, `Type` | Sourced the "Seasonal Discount" type and percentages for cost-efficiency tracking. |
-| **Production** | `Product` | `ProductID`, `Name`, `ProductSubcategoryID` | Dimension table linking SKU IDs to human-readable names and category clusters. |
-| **Production** | `ProductSubcategory` | `ProductSubcategoryID`, `Name` | Used to group specific bicycle models into high-level subcategories for YoY growth tracking. |
-| **Production** | `WorkOrder` | `ProductID`, `StockedQty`, `ModifiedDate` | Core table specifying historical stocked quantities to measure month-over-month supply trends. |
-| **Purchasing** | `PurchaseOrderHeader` | `PurchaseOrderID`, `Status`, `TotalDue`, `ModifiedDate` | Evaluated supplier backend performance by isolating `Status = 1` (Pending) orders. |
-| **Purchasing** | `PurchaseOrderDetail` | `PurchaseOrderID` | Joined context for purchase order line items. |
+| **Sales** | `SalesOrderHeader` | `SalesOrderID`, `OrderDate`, `CustomerID`, `TerritoryID`, `Status`, `ModifiedDate` | Main table for order dates, territories, customer cohorts, and order status. |
+| **Sales** | `SalesOrderDetail` | `SalesOrderID`, `ProductID`, `OrderQty`, `LineTotal`, `UnitPrice`, `SpecialOfferID` | Detail-level table used to calculate quantities, revenue, and pricing. |
+| **Sales** | `SpecialOffer` | `SpecialOfferID`, `DiscountPct`, `Type` | Used to identify "Seasonal Discount" offers and their discount rates. |
+| **Production** | `Product` | `ProductID`, `Name`, `ProductSubcategoryID` | Connects product IDs to product names and subcategories. |
+| **Production** | `ProductSubcategory` | `ProductSubcategoryID`, `Name` | Groups products into subcategories for growth comparisons. |
+| **Production** | `WorkOrder` | `ProductID`, `StockedQty`, `ModifiedDate` | Provides stock quantities used to track monthly inventory trends. |
+| **Purchasing** | `PurchaseOrderHeader` | `PurchaseOrderID`, `Status`, `TotalDue`, `ModifiedDate` | Used to look at purchase orders with `Status = 1` (Pending). |
+| **Purchasing** | `PurchaseOrderDetail` | `PurchaseOrderID` | Provides line-item detail linked to purchase orders. |
 
 ---
 
 ## 3. Full Query Repository
 
-Below is the execution of all 8 operational queries. They are presented here with their logic and a sample of their output results so you can explore the insights directly.
+Below are all 8 queries with their logic and a sample of the results returned in BigQuery.
 
 <details>
 <summary><b>Query 1: Sales Volume L12M</b> (Click to expand)</summary>
@@ -94,7 +94,7 @@ GROUP BY period, product_subcategory
 ORDER BY period DESC, product_subcategory;
 ```
 **Actual Output:**
-![Query 1 Output](Images/Query 1 Output.jpg)
+![Query 1 Output](Images/Query%201%20Output.jpg)
 
 </details>
 
@@ -143,7 +143,7 @@ SELECT subcate_name Name, qty_item, prev_qty_item prv_qty, qty_diff
 FROM qty_growth WHERE growth_rank <= 3 ORDER BY qty_diff DESC;
 ```
 **Actual Output:**
-![Query 2 Output](documents/q2.png)
+![Query 2 Output](Images/Query%202%20Output.jpg)
 
 </details>
 
@@ -173,7 +173,7 @@ WITH
 SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 ```
 **Actual Output:**
-![Query 3 Output](documents/q3.png)
+![Query 3 Output](Images/Query%203%20Output.jpg)
 
 </details>
 
@@ -205,7 +205,7 @@ SELECT year, subcate_name, SUM(discount_cost) total_cost
 FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 ```
 **Actual Output:**
-![Query 4 Output](documents/q4.png)
+![Query 4 Output](Images/Query%204%20Output.jpg)
 
 </details>
 
@@ -238,7 +238,7 @@ SELECT month_join, CONCAT('M-',month_diff_num) month_diff, COUNT(customer_id) cu
 FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY month_join, month_diff;
 ```
 **Actual Output:**
-![Query 5 Output](documents/q5.png)
+![Query 5 Output](Images/Query%205%20Output.jpg)
 
 </details>
 
@@ -269,7 +269,7 @@ LEFT JOIN sum_stock_qty b ON a.product_name = b.product_name AND a.mth = b.mth +
 ORDER BY product_name, a.mth DESC;
 ```
 **Actual Output:**
-![Query 6 Output](documents/q6.png)
+![Query 6 Output](Images/Query%206%20Output.jpg)
 
 </details>
 
@@ -303,7 +303,7 @@ LEFT JOIN stock_2011 st ON sa.mth = st.mth AND sa.productID = st.productID
 ORDER BY 1 DESC, 7 DESC;
 ```
 **Actual Output:**
-![Query 7 Output](documents/q7.png)
+![Query 7 Output](Images/Query%207%20Output.jpg)
 
 </details>
 
@@ -324,7 +324,7 @@ WHERE EXTRACT(YEAR FROM header.ModifiedDate) = 2014 AND Status = 1
 GROUP BY 1,2;
 ```
 **Actual Output:**
-![Query 8 Output](documents/q8.png)
+![Query 8 Output](Images/Query%208%20Output.jpg)
 
 </details>
 
@@ -334,34 +334,40 @@ GROUP BY 1,2;
 ## 4. Project Structure
 
 ```text
-Bicycle_Manufacturer_Performance_Analysis/
-├── documents/                         # Contains query result output images
-│   ├── q1.png
-│   ├── ...
-│   └── q8.png
-├── query/                             
-│   ├── q1_sales_performance_l12m.sql
-│   ├── q2_yoy_growth_top_categories.sql
-│   ├── q3_top_territories.sql
-│   ├── q4_seasonal_discount_cost.sql
-│   ├── q5_retention_rate_cohort.sql
-│   ├── q6_stock_trend_mom.sql
-│   ├── q7_stock_to_sales_ratio.sql
-│   └── q8_pending_orders_2014.sql
-└── README.md                          
+Bicycle_Manufacturer_Performance_Analysis-main/
+├── Images/                             # Screenshots of each query's result
+│   ├── banner.jpg
+│   ├── Query 1 Output.jpg
+│   ├── Query 2 Output.jpg
+│   ├── Query 3 Output.jpg
+│   ├── Query 4 Output.jpg
+│   ├── Query 5 Output.jpg
+│   ├── Query 6 Output.jpg
+│   ├── Query 7 Output.jpg
+│   └── Query 8 Output.jpg
+├── SQL_Queries/                        # SQL source files for each question
+│   ├── Q1 Sales Volume L12M.sql
+│   ├── Q2 YoY Growth Rate by Category.sql
+│   ├── Q3 Top Territories by Year.sql
+│   ├── Q4 Seasonal Discount Efficiency.sql
+│   ├── Q5 Cohort Retention Rate.sql
+│   ├── Q6 Stock Trend MoM.sql
+│   ├── Q7 Stock-to-Sales Ratio.sql
+│   └── Q8 Pending Orders Breakdown.sql
+└── README.md
 ```
 
 ---
 
 ## 5. Setup Instructions
 
-To execute these queries on **Google BigQuery**, follow these steps:
+To run these queries in **Google BigQuery**:
 
-1. **Set up Google Cloud Platform (GCP):** If you don't have one, create a GCP account and enable the BigQuery API.
-2. **Import the Dataset:** You need the `adventureworks2019` dataset. You can find CSV exports of the open-source Microsoft AdventureWorks database online. Create a new dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
+1. **Set up a Google Cloud Platform (GCP) account:** Create one if you don't have it yet, and enable the BigQuery API.
+2. **Load the dataset:** You'll need the `adventureworks2019` dataset. CSV exports of the open-source Microsoft AdventureWorks database are available online. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
 3. **Clone this repository:**
 ```bash
 git clone https://github.com/hdangnguyen/Bicycle_Manufacturer_Performance_Analysis.git
 cd Bicycle_Manufacturer_Performance_Analysis
 ```
-4. **Execute Queries:** Open the BigQuery console. Copy the query syntax from the `.sql` files within the `query/` directory. Ensure your BigQuery project context matches the query namespaces before running them. No additional Python dependencies are required.
+4. **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
