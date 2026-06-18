@@ -18,8 +18,6 @@ _Analyze sales, inventory, and purchasing data to answer 8 business questions an
 
 👤 Author: Bạch Minh Nam
 
-📅 Date: 2025-10-07
-
 ---
 
 ## 📌 Overview
