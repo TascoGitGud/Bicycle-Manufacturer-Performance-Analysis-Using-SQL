@@ -13,7 +13,7 @@
 _Analyze sales, inventory, and purchasing data to answer 8 business questions and turn raw data into clear insights._
 
 - 🎯 **Business Question:** Which products, territories, and time periods drive the most sales - and where are the risks?
-- 🏭 **Domain:** Manufacturing & Retail
+- 🏬 **Domain:** Manufacturing & Retail
 - 🛠️ **Tools:** SQL (Google BigQuery)
 
 👤 Author: Bạch Minh Nam
