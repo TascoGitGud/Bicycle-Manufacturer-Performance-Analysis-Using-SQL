@@ -74,14 +74,11 @@ To answer the 8 business questions in this project, **8 tables** from the `Sales
 
 ## 🔎 Query Repository
 
-Below are all 8 queries with their business context, SQL code, output, and observations.
-
-<details>
-<summary><b>Query 1: Sales Volume L12M</b> (Click to expand)</summary>
+**Query 1: Sales Volume L12M</b> (Click to expand)**
 
 *Question: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M.*
 
-**Tracking the last 12 months of sales by subcategory helps the business spot which product lines are growing or declining in real time - so inventory and marketing budgets can be adjusted before it's too late.**
+*Tracking the last 12 months of sales by subcategory helps the business spot which product lines are growing or declining in real time - so inventory and marketing budgets can be adjusted before it's too late.*
 
 ```sql
 WITH
