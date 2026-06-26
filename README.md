@@ -406,12 +406,12 @@ As of 2014, there are **224 pending purchase orders** totaling **~$9.27M** in un
 Bicycle_Manufacturer_Performance_Analysis-main/
 ├── Images/                             # Screenshots of each query's result
 │   ├── main_banner.jpg
-│   ├── Query_1_Output.jpg
+│   ├── Query_01_Output.jpg
 │   ├── Query_2_Output.jpg
 │   ├── Query_3_Output.jpg
 │   ├── Query_4_Output.jpg
 │   ├── Query_5_Output.jpg
-│   ├── Query_6_Output.jpg
+│   ├── Query_06_Output.jpg
 │   ├── Query_7_Output.jpg
 │   └── Query_8_Output.jpg
 ├── SQL_Queries/                        # SQL source files for each question
