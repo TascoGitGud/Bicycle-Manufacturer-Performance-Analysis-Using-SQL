@@ -74,7 +74,7 @@ To answer the 8 business questions in this project, **8 tables** from the `Sales
 
 ## 🔎 Query Repository
 
-**Query 1: Sales Volume L12M</b>)**
+### Query 1: Sales Volume L12M
 
 *Question: Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M.*
 
@@ -120,18 +120,17 @@ ORDER BY total_sales DESC, product_subcategory;
 **📊 Actual Output:**
 ![Query 1 Output](Images/Query_01_Output.png)
 
-*💡 Observations:*
+**💡 Observations:**
 
-> _Road Bikes, Touring Bikes, and Mountain Bikes consistently dominate both revenue and order volume across all months - with Road Bikes peaking at $2.1M in Mar 2014 alone._
+> _Road Bikes, Touring Bikes, and Mountain Bikes dominate both revenue and order volume across all months. Road Bikes peaked at **$2.1M in Mar 2014** with 2,371 units across 1,102 orders — the single highest-revenue month-subcategory combination in the dataset._
 
-</details>
+---
 
-<details>
-<summary><b>Query 2: YoY Growth Rate by Category</b> (Click to expand)</summary>
+### Query 2: YoY Growth Rate by Category
 
 *Question: Calc % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal.*
 
-**Identifying the top 3 fastest-growing subcategories gives leadership a clear signal of where demand is heading - useful for production planning and deciding where to invest next.**
+> _Identifying the top 3 fastest-growing subcategories gives leadership a clear signal of where demand is heading - useful for production planning and deciding where to invest next._
 
 ```sql
 WITH
@@ -178,16 +177,15 @@ FROM qty_growth WHERE growth_rank <= 3 ORDER BY qty_diff DESC;
 
 **💡 Observations:**
 
-> _Mountain Frames (+521%), Socks (+421%), and Road Frames (+389%) are the top 3 fastest-growing subcategories YoY._
+> _Mountain Frames led growth at **+521%** (510 → 3,168 units), followed by Socks at **+421%** (523 → 2,724) and Road Frames at **+389%** (1,137 → 5,564) — all three showing explosive demand expansion YoY, signaling strong investment potential in these subcategories._
 
-</details>
+---
 
-<details>
-<summary><b>Query 3: Top Territories by Year</b> (Click to expand)</summary>
+### Query 3: Top Territories by Year
 
 *Question: Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number.*
 
-**Knowing which territories consistently drive the most orders helps the sales team prioritize regional resources and flag underperforming areas that may need support.**
+> _Knowing which territories consistently drive the most orders helps the sales team prioritize regional resources and flag underperforming areas that may need support._
 
 ```sql
 WITH 
@@ -215,16 +213,15 @@ SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 
 **💡 Observations:**
 
-> _Territory 4 ranked #1 every year from 2011–2014, with Territory 6 and Territory 1 consistently holding #2 and #3_
+> _Territory 4 ranked **#1 every year from 2011–2014**, growing from 3,238 to 11,632 orders — nearly 4x growth over the period. Territory 6 and Territory 1 consistently held #2 and #3, with the same top-3 pattern repeating across all 4 years, indicating a stable and dominant regional hierarchy._
 
-</details>
+---
 
-<details>
-<summary><b>Query 4: Seasonal Discount Efficiency</b> (Click to expand)</summary>
+### Query 4: Seasonal Discount Efficiency
 
 *Question: Calc Total Discount Cost belongs to Seasonal Discount for each SubCategory.*
 
-**Calculating the total cost of seasonal discounts per subcategory lets the finance team evaluate whether the promotions are worth the margin loss - and which categories are eating the most discount budget.**
+> _Calculating the total cost of seasonal discounts per subcategory lets the finance team evaluate whether the promotions are worth the margin loss - and which categories are eating the most discount budget._
 
 ```sql
 WITH
@@ -254,16 +251,15 @@ FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 
 **💡 Observations:**
 
-> _Helmets is the only subcategory receiving seasonal discounts, with discount cost doubling from $828 in 2012 to $1,606 in 2013._
+> _Helmets is the **only subcategory** receiving seasonal discounts. Total discount cost nearly doubled from **$828 in 2012 to $1,606 in 2013**, suggesting increasing promotion intensity — worth reviewing whether the margin trade-off is justified by the volume uplift._
 
-</details>
+---
 
-<details>
-<summary><b>Query 5: Cohort Retention Rate</b> (Click to expand)</summary>
+### Query 5: Cohort Retention Rate
 
 *Question: Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis).*
 
-**Cohort retention shows exactly when customers stop coming back after their first purchase - giving the CRM team a window to step in with re-engagement campaigns before churn becomes permanent.**
+> _Cohort retention shows exactly when customers stop coming back after their first purchase - giving the CRM team a window to step in with re-engagement campaigns before churn becomes permanent._
 
 ```sql
 WITH successful_order AS (
@@ -294,16 +290,15 @@ FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY m
 
 **💡 Observations:**
 
-> _Retention drops sharply after the first month - cohort 1 went from 2,076 customers at M-0 down to just 78 at M-1, a ~96% drop-off. Most cohorts follow the same pattern_
+> _Retention drops sharply after the first purchase — Cohort 1 fell from **2,076 customers at M-0 to just 78 at M-1** (~96% drop-off). Notably, M-3 shows a consistent recovery spike (252 customers in Cohort 1, 234 in Cohort 2), possibly indicating a seasonal re-purchase pattern worth targeting with a timed re-engagement campaign._
 
-</details>
+---
 
-<details>
-<summary><b>Query 6: Stock Trend MoM</b> (Click to expand)</summary>
+### Query 6: Stock Trend MoM
 
 *Question: Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal.*
 
-**Month-over-month stock changes reveal whether inventory is building up or running low for each product - helping the warehouse team avoid both overstock and stockout situations.**
+> _Month-over-month stock changes reveal whether inventory is building up or running low for each product - helping the warehouse team avoid both overstock and stockout situations._
 
 ```sql
 WITH
@@ -331,16 +326,16 @@ ORDER BY a.stock_qty DESC;
 ![Query 6 Output](Images/Query_06_Output.png)
 
 **💡 Observations:**
-> _HL Mountain Frame and Mountain-100 Silver variants show the highest MoM spikes (up to +1080% in Jul 2011)_
 
-</details>
+> _HL Mountain Frame - Silver, 42 and Mountain-100 Silver, 42 both hit a **+1,080% MoM spike in Jul 2011** (5 → 59 units stocked), while HL Mountain Frame - Silver, 38 reached the highest absolute stock at 96 units that month. These sudden surges suggest reactive restocking rather than planned replenishment — a signal worth investigating for demand forecasting improvements._
 
-<details>
-<summary><b>Query 7: Stock-to-Sales Ratio</b> (Click to expand)</summary>
+---
+
+### Query 7: Stock-to-Sales Ratio
 
 *Question: Calc Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal.*
 
-**A high stock-to-sales ratio means the company is holding more inventory than it's selling - tying up cash. This query flags which products need faster turnover or reduced production.**
+> _A high stock-to-sales ratio means the company is holding more inventory than it's selling - tying up cash. This query flags which products need faster turnover or reduced production._
 
 ```sql
 WITH 
@@ -371,16 +366,16 @@ ORDER BY 1 DESC, 7 DESC;
 ![Query 7 Output](Images/Query_7_Output.png)
 
 **💡 Observations:**
-> _In Dec 2011, HL Mountain Frame variants show the highest stock-to-sales ratios (up to 27x), meaning the company is holding far more inventory than it's selling_
 
-</details>
+> _In Dec 2011, the HL Mountain Frame line shows critically high overstock — HL Mountain Frame - Black, 48 had a ratio of **27x** (27 units stocked, only 1 sold), followed by Black, 42 at 26x and Silver, 38 at 16x. The entire HL Mountain Frame and LL Road Frame lines dominate the top 10, indicating a systemic overproduction issue in these product families that warrants immediate inventory rebalancing._
 
-<details>
-<summary><b>Query 8: Pending Orders Breakdown</b> (Click to expand)</summary>
+---
 
-*_Question: No of order and value at Pending status in 2014._*
+### Query 8: Pending Orders Breakdown
 
-**Pending purchase orders represent committed but undelivered spend - tracking their total value helps the procurement team manage cash flow and follow up with suppliers before delays impact production.**
+*Question: No of order and value at Pending status in 2014.*
+
+> _Pending purchase orders represent committed but undelivered spend - tracking their total value helps the procurement team manage cash flow and follow up with suppliers before delays impact production._
 
 ```sql
 SELECT
@@ -398,9 +393,28 @@ GROUP BY 1,2;
 ![Query 8 Output](Images/Query_8_Output.png)
 
 **💡 Observations:**
-> _As of 2014, there are 224 pending purchase orders totaling ~$9.27M in undelivered spend_
 
-</details>
+> _As of 2014, there are **224 pending purchase orders** totaling **~$9.27M** in undelivered spend. This represents a significant block of committed cash flow that has not yet been fulfilled — the procurement team should prioritize supplier follow-up to prevent downstream production delays._
+
+---
+
+## 🔎 Final Conclusion & Recommendations
+
+### 📌 Key Insights
+
+- **Sales are heavily concentrated** in Road Bikes, Touring Bikes, and Mountain Bikes — Road Bikes alone peaked at **$2.1M in Mar 2014**, making supply continuity for these lines a top priority.
+- **High-growth subcategories are emerging** — Mountain Frames (+521%), Socks (+421%), and Road Frames (+389%) signal strong untapped demand worth investing in.
+- **Territory dominance is fixed** — Territory 4, 6, and 1 have held the same top-3 ranking every year since 2011, suggesting other regions remain underdeveloped.
+- **Customer retention is critically low** — a ~96% drop-off after the first purchase, with a consistent M-3 recovery spike that is currently not being leveraged.
+- **Inventory planning is reactive, not demand-driven** — the HL Mountain Frame line shows ratios as high as **27x stock-to-sales** alongside +1,080% restocking spikes in the same year.
+- **$9.27M in procurement spend** is sitting in pending status with no confirmed delivery timeline — a significant cash flow blind spot.
+
+### 📌 Recommendations
+
+1. **Invest in emerging subcategories:** Shift part of production capacity toward Mountain Frames and Road Frames to capitalize on their explosive YoY growth before demand outpaces supply.
+2. **Activate a M-3 re-engagement campaign:** Cohort data points to a natural repurchase window at 3 months — a timed follow-up offer at this point could convert a one-time buyer pattern into a reliable retention loop.
+3. **Fix inventory planning for Frame products:** Replace reactive restocking with rolling L3M demand forecasts to eliminate the overstock-stockout cycle in the HL Mountain Frame and LL Road Frame lines.
+4. **Follow up on pending purchase orders:** Assign ownership to the 224 pending orders (~$9.27M) and establish a weekly review to prevent supplier delays from cascading into production gaps.
 
 ---
 
@@ -437,9 +451,13 @@ Bicycle_Manufacturer_Performance_Analysis-main/
 To run these queries in **Google BigQuery**:
 
 1. ☁️ **Set up a Google Cloud Platform (GCP) account:** Create one if you don't have it yet, and enable the BigQuery API.
-2. 📥 **Load the dataset:** You'll need the `adventureworks2019` dataset. You can find CSV exports of the open-source Microsoft AdventureWorks database online. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
+2. 📥 **Load the dataset:** Download the AdventureWorks CSV exports from [this public source](https://github.com/lorint/AdventureWorks-for-Postgres) or equivalent. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
 3. 📂 **Clone this repository:**
 ```bash
 https://github.com/TascoGitGud/Bicycle-Manufacturer-Performance-Analysis-Using-SQL.git
 ```
 4. ▶️ **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
+
+
+
+
