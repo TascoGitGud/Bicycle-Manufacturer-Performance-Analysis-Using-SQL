@@ -122,7 +122,7 @@ ORDER BY total_sales DESC, product_subcategory;
 
 **💡 Observations:**
 
-> _Road Bikes, Touring Bikes, and Mountain Bikes dominate both revenue and order volume across all months. Road Bikes peaked at **$2.1M in Mar 2014** with 2,371 units across 1,102 orders - the single highest-revenue month-subcategory combination in the dataset._
+Road Bikes, Touring Bikes, and Mountain Bikes dominate both revenue and order volume across all months. Road Bikes peaked at **$2.1M in Mar 2014** with 2,371 units across 1,102 orders - the single highest-revenue month-subcategory combination in the dataset.
 
 ---
 
@@ -177,7 +177,7 @@ FROM qty_growth WHERE growth_rank <= 3 ORDER BY qty_diff DESC;
 
 **💡 Observations:**
 
-> _Mountain Frames led growth at **+521%** (510 → 3,168 units), followed by Socks at **+421%** (523 → 2,724) and Road Frames at **+389%** (1,137 → 5,564) - all three showing explosive demand expansion YoY, signaling strong investment potential in these subcategories._
+Mountain Frames led growth at **+521%** (510 → 3,168 units), followed by Socks at **+421%** (523 → 2,724) and Road Frames at **+389%** (1,137 → 5,564) - all three showing explosive demand expansion YoY, signaling strong investment potential in these subcategories.
 
 ---
 
@@ -213,7 +213,7 @@ SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 
 **💡 Observations:**
 
-> _Territory 4 ranked **#1 every year from 2011–2014**, growing from 3,238 to 11,632 orders - nearly 4x growth over the period. Territory 6 and Territory 1 consistently held #2 and #3, with the same top-3 pattern repeating across all 4 years, indicating a stable and dominant regional hierarchy._
+Territory 4 ranked **#1 every year from 2011–2014**, growing from 3,238 to 11,632 orders - nearly 4x growth over the period. Territory 6 and Territory 1 consistently held #2 and #3, with the same top-3 pattern repeating across all 4 years, indicating a stable and dominant regional hierarchy.
 
 ---
 
@@ -251,7 +251,7 @@ FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 
 **💡 Observations:**
 
-> _Helmets is the **only subcategory** receiving seasonal discounts. Total discount cost nearly doubled from **$828 in 2012 to $1,606 in 2013**, suggesting increasing promotion intensity - worth reviewing whether the margin trade-off is justified by the volume uplift._
+Helmets is the **only subcategory** receiving seasonal discounts. Total discount cost nearly doubled from **$828 in 2012 to $1,606 in 2013**, suggesting increasing promotion intensity - worth reviewing whether the margin trade-off is justified by the volume uplift.
 
 ---
 
@@ -290,7 +290,7 @@ FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY m
 
 **💡 Observations:**
 
-> _Retention drops sharply after the first purchase - Cohort 1 fell from **2,076 customers at M-0 to just 78 at M-1** (~96% drop-off). Notably, M-3 shows a consistent recovery spike (252 customers in Cohort 1, 234 in Cohort 2), possibly indicating a seasonal re-purchase pattern worth targeting with a timed re-engagement campaign._
+Retention drops sharply after the first purchase - Cohort 1 fell from **2,076 customers at M-0 to just 78 at M-1** (~96% drop-off). Notably, M-3 shows a consistent recovery spike (252 customers in Cohort 1, 234 in Cohort 2), possibly indicating a seasonal re-purchase pattern worth targeting with a timed re-engagement campaign.
 
 ---
 
@@ -327,7 +327,7 @@ ORDER BY a.stock_qty DESC;
 
 **💡 Observations:**
 
-> _HL Mountain Frame - Silver, 42 and Mountain-100 Silver, 42 both hit a **+1,080% MoM spike in Jul 2011** (5 → 59 units stocked), while HL Mountain Frame - Silver, 38 reached the highest absolute stock at 96 units that month. These sudden surges suggest reactive restocking rather than planned replenishment - a signal worth investigating for demand forecasting improvements._
+HL Mountain Frame - Silver, 42 and Mountain-100 Silver, 42 both hit a **+1,080% MoM spike in Jul 2011** (5 → 59 units stocked), while HL Mountain Frame - Silver, 38 reached the highest absolute stock at 96 units that month. These sudden surges suggest reactive restocking rather than planned replenishment - a signal worth investigating for demand forecasting improvements.
 
 ---
 
@@ -367,7 +367,7 @@ ORDER BY 1 DESC, 7 DESC;
 
 **💡 Observations:**
 
-> _In Dec 2011, the HL Mountain Frame line shows critically high overstock - HL Mountain Frame - Black, 48 had a ratio of **27x** (27 units stocked, only 1 sold), followed by Black, 42 at 26x and Silver, 38 at 16x. The entire HL Mountain Frame and LL Road Frame lines dominate the top 10, indicating a systemic overproduction issue in these product families that warrants immediate inventory rebalancing._
+In Dec 2011, the HL Mountain Frame line shows critically high overstock - HL Mountain Frame - Black, 48 had a ratio of **27x** (27 units stocked, only 1 sold), followed by Black, 42 at 26x and Silver, 38 at 16x. The entire HL Mountain Frame and LL Road Frame lines dominate the top 10, indicating a systemic overproduction issue in these product families that warrants immediate inventory rebalancing.
 
 ---
 
@@ -394,7 +394,7 @@ GROUP BY 1,2;
 
 **💡 Observations:**
 
-> _As of 2014, there are **224 pending purchase orders** totaling **~$9.27M** in undelivered spend. This represents a significant block of committed cash flow that has not yet been fulfilled - the procurement team should prioritize supplier follow-up to prevent downstream production delays._
+As of 2014, there are **224 pending purchase orders** totaling **~$9.27M** in undelivered spend. This represents a significant block of committed cash flow that has not yet been fulfilled - the procurement team should prioritize supplier follow-up to prevent downstream production delays.
 
 ---
 
