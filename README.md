@@ -437,7 +437,7 @@ Bicycle_Manufacturer_Performance_Analysis-main/
 To run these queries in **Google BigQuery**:
 
 1. ☁️ **Set up a Google Cloud Platform (GCP) account:** Create one if you don't have it yet, and enable the BigQuery API.
-2. 📥 **Load the dataset:** You'll need the `adventureworks2019` dataset. CSV exports of the open-source Microsoft AdventureWorks database are available online. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
+2. 📥 **Load the dataset:** You'll need the `adventureworks2019` dataset. You can find CSV exports of the open-source Microsoft AdventureWorks database online. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
 3. 📂 **Clone this repository:**
 ```bash
 https://github.com/TascoGitGud/Bicycle-Manufacturer-Performance-Analysis-Using-SQL.git
