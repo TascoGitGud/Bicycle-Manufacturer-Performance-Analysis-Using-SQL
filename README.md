@@ -398,26 +398,6 @@ GROUP BY 1,2;
 
 ---
 
-## 🔎 Final Conclusion & Recommendations
-
-### 📌 Key Insights
-
-- **Sales are heavily concentrated** in Road Bikes, Touring Bikes, and Mountain Bikes - Road Bikes alone peaked at **$2.1M in Mar 2014**, making supply continuity for these lines a top priority.
-- **High-growth subcategories are emerging** - Mountain Frames (+521%), Socks (+421%), and Road Frames (+389%) signal strong untapped demand worth investing in.
-- **Territory dominance is fixed** - Territory 4, 6, and 1 have held the same top-3 ranking every year since 2011, suggesting other regions remain underdeveloped.
-- **Customer retention is critically low** - a ~96% drop-off after the first purchase, with a consistent M-3 recovery spike that is currently not being leveraged.
-- **Inventory planning is reactive, not demand-driven** - the HL Mountain Frame line shows ratios as high as **27x stock-to-sales** alongside +1,080% restocking spikes in the same year.
-- **$9.27M in procurement spend** is sitting in pending status with no confirmed delivery timeline - a significant cash flow blind spot.
-
-### 📌 Recommendations
-
-1. **Invest in emerging subcategories:** Shift part of production capacity toward Mountain Frames and Road Frames to capitalize on their explosive YoY growth before demand outpaces supply.
-2. **Activate a M-3 re-engagement campaign:** Cohort data points to a natural repurchase window at 3 months - a timed follow-up offer at this point could convert a one-time buyer pattern into a reliable retention loop.
-3. **Fix inventory planning for Frame products:** Replace reactive restocking with rolling L3M demand forecasts to eliminate the overstock-stockout cycle in the HL Mountain Frame and LL Road Frame lines.
-4. **Follow up on pending purchase orders:** Assign ownership to the 224 pending orders (~$9.27M) and establish a weekly review to prevent supplier delays from cascading into production gaps.
-
----
-
 ## 🗂️ Project Structure
 
 ```text
