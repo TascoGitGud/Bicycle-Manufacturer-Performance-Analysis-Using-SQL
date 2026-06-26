@@ -20,6 +20,16 @@ _Analyze sales, inventory, and purchasing data to answer 8 business questions an
 
 ---
 
+### 📑 Table of Contents
+
+- [📌 Overview](#-overview)
+- [📂 Dataset](#-dataset)
+- [🔎 Query Repository](#-query-repository)
+- [🗂️ Project Structure](#️-project-structure)
+- [🚀 Setup Instructions](#-setup-instructions)
+
+---
+
 ## 📌 Overview
 
 **Objective:**
@@ -38,14 +48,6 @@ This project uses SQL to analyze sales, inventory, and purchasing data from Adve
 
 - **Data analysts & business analysts** who want a reference for writing analytical SQL (CTEs, window functions, cohort analysis)
 - **Decision-makers & stakeholders** who need quick insights into sales trends, inventory health, and supplier performance
-
-### 📑 Table of Contents
-
-- [📌 Overview](#-overview)
-- [📂 Dataset](#-dataset)
-- [🔎 Query Repository](#-query-repository)
-- [🗂️ Project Structure](#️-project-structure)
-- [🚀 Setup Instructions](#-setup-instructions)
 
 ---
 
