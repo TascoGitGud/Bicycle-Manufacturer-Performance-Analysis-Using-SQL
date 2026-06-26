@@ -434,11 +434,7 @@ To run these queries in **Google BigQuery**:
 
 1. ☁️ **Set up a Google Cloud Platform (GCP) account:** Create one if you don't have it yet, and enable the BigQuery API.
 2. 📥 **Load the dataset:** Download the AdventureWorks CSV exports from [this public source](https://github.com/lorint/AdventureWorks-for-Postgres) or equivalent. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
-3. 📂 **Clone this repository:**
-```bash
-https://github.com/TascoGitGud/Bicycle-Manufacturer-Performance-Analysis-Using-SQL.git
-```
-4. ▶️ **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
+3. ▶️ **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
 
 
 
