@@ -401,31 +401,36 @@ $9.27M in 224 pending purchase orders (2014). Establish supplier SLA monitoring 
 
 ## 🎯 Key Findings
 
-**Revenue Concentration:** 
-
+**1. Revenue Concentration:** 
 - Road Bikes dominates sales ($2.1M in March 2014), but only 3 product categories (Road, Mountain, Touring Bikes) generate ~80% of revenue.
 - **Action:** Diversify product portfolio to reduce dependency.
  
-**Fast-Growing Segments:** 
--Mountain Frames (+510%), Socks (+421%), and Road Frames (+389%) show explosive growth. 
--**Action:** Increase production capacity and marketing budget immediately.
+**2. Fast-Growing Segments:** 
+- Mountain Frames (+510%), Socks (+421%), and Road Frames (+389%) show explosive growth. 
+- **Action:** Increase production capacity and marketing budget immediately.
  
-**Territorial Dominance:** 
+**3. Territorial Dominance:** 
 - Territory 4 is 4x stronger than others (3,238→11,632 orders, 2011-2014).
 - **Action:** Investigate success factors and replicate in underperforming territories.
  
-**Discount Inefficiency:** 
+**4. Discount Inefficiency:** 
 - Only Helmets receive seasonal discounts ($828→$1,606), but profitability impact unclear.
 - **Action:** Conduct ROI analysis before expanding discount programs.
  
-**Customer Retention Crisis:** 
+**5. Customer Retention Crisis:** 
 - 96% of 2014 customers never returned (2,076→78 by month 2). Seasonal uptick at month 3 suggests opportunity.
 - **Action:** Launch re-engagement campaigns timed to seasonal patterns.
  
-**Poor Inventory Planning:** Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking, not demand forecasting. **Action:** Implement predictive ordering system to avoid stock-outs.
+**6. Poor Inventory Planning:** 
+- Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking, not demand forecasting.
+- **Action:** Implement predictive ordering system to avoid stock-outs.
  
-**Excess Stock Levels:** Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold). **Action:** Free up $M+ in working capital by reducing overstock.
+**7. Excess Stock Levels:** 
+- Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold).
+- **Action:** Free up $M+ in working capital by reducing overstock.
  
-**Supply Chain Risk:** $9.27M in 224 pending purchase orders (2014) pose production delay risks. **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
+**8. Supply Chain Risk:** 
+- $9.27M in 224 pending purchase orders (2014) pose production delay risks.
+- **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
  
 ---
