@@ -26,8 +26,6 @@ _Analyze sales, inventory, and purchasing data to answer 8 business questions an
 - [📂 Dataset](#-dataset)
 - [🔎 Query Repository](#-query-repository)
 - [🎯 Key Findings](#-key-findings)
-- [🗂️ Project Structure](#️-project-structure)
-- [🚀 Setup Instructions](#-setup-instructions)
 
 ---
 
