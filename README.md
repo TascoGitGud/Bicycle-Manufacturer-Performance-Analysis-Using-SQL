@@ -31,13 +31,13 @@ _Analyze sales, inventory, and purchasing data to answer 8 business questions an
 
 ## 📌 Overview
 
-**Objective:**
+**🎯 Objective:**
 
 - This project uses SQL (Google BigQuery) to analyze sales, production, and purchasing data from the **AdventureWorks dataset**
 - It answers 8 specific business questions covering **Sales Performance, Customer Retention, and Inventory Optimization**
 - The goal is to turn raw transactional and operational data into clear, actionable insights for the business
 
-**Main business question:**
+**❓ Main business question:**
 
 This project uses SQL to analyze sales, inventory, and purchasing data from AdventureWorks to:
 - Identify which product categories, territories, and time periods drive the most sales
