@@ -1,4 +1,4 @@
-# 🚲 Bicycle Manufacturer Performance Analysis | SQL
+# 🚲 SQL | Bicycle Manufacturer Performance Analysis
 
 ![SQL](https://img.shields.io/badge/Language-SQL-3776AB?style=flat-square&logo=sql&logoColor=white)
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)
