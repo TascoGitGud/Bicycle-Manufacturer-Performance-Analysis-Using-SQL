@@ -431,6 +431,5 @@ The store should check with suppliers to make sure these orders arrive on time, 
 
 **Excess Stock Levels**: Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold). **Action:** Free up $M+ in working capital by reducing overstock.
 
-### 8. **Supply Chain Risk**
-$9.27M in 224 pending purchase orders (2014) pose production delay risks. **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
+**Supply Chain Risk**: $9.27M in 224 pending purchase orders (2014) pose production delay risks. **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
 
