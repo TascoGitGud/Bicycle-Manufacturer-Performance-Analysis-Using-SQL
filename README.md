@@ -123,9 +123,7 @@ ORDER BY total_sales DESC, product_subcategory;
 
 **💡 Observations:**
 
-Road Bikes is the best seller with $2.1M in March 2014 and 2,371 units sold. Touring Bikes and Mountain Bikes also perform well across all months.
-
-Road Bikes makes the most money, so the store should focus on keeping this category strong with good inventory and marketing.
+Road Bikes dominates with $2.1M revenue (Mar 2014, 2,371 units). Three categories (Road, Mountain, Touring) drive ~80% of revenue. Maintain inventory strength and prioritize best-selling categories.
 
 ---
 
@@ -180,9 +178,7 @@ FROM qty_growth WHERE growth_rank <= 3 ORDER BY qty_diff DESC;
 
 **💡 Observations:**
 
-Mountain Frames grew the most with 510% more sales. Socks also grew a lot at 421%, and Road Frames at 389%.
-
-These three products are selling much better than before, so the store should stock more of them and focus on marketing these fast-growing items.
+Mountain Frames: +510%, Socks: +421%, Road Frames: +389% YoY growth. These three categories show explosive demand. Increase production capacity and marketing investment immediately.
 
 ---
 
@@ -218,9 +214,7 @@ SELECT * FROM ranking_order_quantity WHERE rk <= 3 ORDER BY yr DESC;
 
 **💡 Observations:**
 
-Territory 4 is the strongest region every year from 2011 to 2014, growing from 3,238 orders to 11,632 orders - almost 4 times bigger.
-
-Territory 6 and Territory 1 are always second and third. This pattern is consistent, showing these three regions are the most important and stable for the business.
+Territory 4 dominates (3,238→11,632 orders, 2011-2014), 4x stronger than others. Territories 1 & 6 consistently rank 2-3. Investigate Territory 4 success factors and replicate across regions.
 
 ---
 
@@ -258,9 +252,7 @@ FROM calculated_discount_cost GROUP BY year, subcate_name ORDER BY year;
 
 **💡 Observations:**
 
-Helmets is the only product getting discounts. The discount cost doubled from $828 in 2012 to $1,606 in 2013.
-
-The store should check if these discounts are actually bringing more sales and profit, or if they're just cutting into margins without enough benefit.
+Only Helmets receive seasonal discounts ($828→$1,606, 2012-2013). Profitability impact unclear. Conduct ROI analysis before expanding discount strategy.
 
 ---
 
@@ -299,9 +291,7 @@ FROM find_month_diff GROUP BY month_join, CONCAT('M-',month_diff_num) ORDER BY m
 
 **💡 Observations:**
 
-Most customers only buy once. In the first month, 2,076 people bought, but by the next month only 78 came back - a huge drop.
-
-But at month 3, more customers come back to buy again (around 250). This might be a seasonal pattern, so the store should send emails or offers to bring customers back at that time.
+96% of 2014 customers never return (2,076→78 by month 2). Seasonal uptick at month 3 suggests re-engagement opportunity. Launch email campaigns timed to seasonal patterns.
 
 ---
 
@@ -338,9 +328,7 @@ ORDER BY a.stock_qty DESC;
 
 **💡 Observations:**
 
-In July 2011, some mountain frames suddenly got much more stock - like HL Mountain Frame Silver jumped from 5 to 59 units. This looks like a reaction to running out, not planned ordering.
-
-The store should use better demand forecasting so they stock products before they run out, instead of scrambling to restock later.
+Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking. Implement demand forecasting to avoid both stock-outs and overstock situations.
 
 ---
 
@@ -380,9 +368,7 @@ ORDER BY 1 DESC, 7 DESC;
 
 **💡 Observations:**
 
-In December 2011, some products have way too much stock. HL Mountain Frame Black has 27 units in stock but only sold 1 - that's 27 times more stock than needed.
-
-This shows the store ordered too much of these frames. They should reduce orders for these products and focus on items that sell faster.
+Stock-to-sales ratio >20x for slow-moving frames (HL Mountain Frame Black: 27 in stock, 1 sold). Free up $M+ in working capital by reducing overstock and improving inventory turnover.
 
 ---
 
@@ -409,27 +395,26 @@ GROUP BY 1,2;
 
 **💡 Observations:**
 
-In 2014, there are 224 orders waiting to be delivered worth about $9.27M. This is a lot of money sitting in pending orders.
-
-The store should check with suppliers to make sure these orders arrive on time, so production and sales don't get delayed.
+$9.27M in 224 pending purchase orders (2014). Establish supplier SLA monitoring and follow-up protocols to prevent production delays and cash flow bottlenecks.
 
 ---
 
 ## 🎯 Key Findings
 
-**Revenue Concentration**: Road Bikes dominates sales ($2.1M in March 2014), but only 3 product categories (Road, Mountain, Touring Bikes) generate ~80% of revenue. **Action:** Diversify product portfolio to reduce dependency.
+**Revenue Concentration:** Road Bikes dominates sales ($2.1M in March 2014), but only 3 product categories (Road, Mountain, Touring Bikes) generate ~80% of revenue. **Action:** Diversify product portfolio to reduce dependency.
 
-**Fast-Growing Segments**: Mountain Frames (+510%), Socks (+421%), and Road Frames (+389%) show explosive growth. **Action:** Increase production capacity and marketing budget immediately.
+**Fast-Growing Segments:** Mountain Frames (+510%), Socks (+421%), and Road Frames (+389%) show explosive growth. **Action:** Increase production capacity and marketing budget immediately.
 
-**Territorial Dominance**: Territory 4 is 4x stronger than others (3,238→11,632 orders, 2011-2014). **Action:** Investigate success factors and replicate in underperforming territories.
+**Territorial Dominance:** Territory 4 is 4x stronger than others (3,238→11,632 orders, 2011-2014). **Action:** Investigate success factors and replicate in underperforming territories.
 
-**Discount Inefficiency**: Only Helmets receive seasonal discounts ($828→$1,606), but profitability impact unclear. **Action:** Conduct ROI analysis before expanding discount programs.
+**Discount Inefficiency:** Only Helmets receive seasonal discounts ($828→$1,606), but profitability impact unclear. **Action:** Conduct ROI analysis before expanding discount programs.
 
-**Customer Retention Crisis**: 96% of 2014 customers never returned (2,076→78 by month 2). Seasonal uptick at month 3 suggests opportunity. **Action:** Launch re-engagement campaigns timed to seasonal patterns.
+**Customer Retention Crisis:** 96% of 2014 customers never returned (2,076→78 by month 2). Seasonal uptick at month 3 suggests opportunity. **Action:** Launch re-engagement campaigns timed to seasonal patterns.
 
-**Poor Inventory Planning**: Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking, not demand forecasting. **Action:** Implement predictive ordering system to avoid stock-outs.
+**Poor Inventory Planning:** Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking, not demand forecasting. **Action:** Implement predictive ordering system to avoid stock-outs.
 
-**Excess Stock Levels**: Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold). **Action:** Free up $M+ in working capital by reducing overstock.
+**Excess Stock Levels:** Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold). **Action:** Free up $M+ in working capital by reducing overstock.
 
-**Supply Chain Risk**: $9.27M in 224 pending purchase orders (2014) pose production delay risks. **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
+**Supply Chain Risk:** $9.27M in 224 pending purchase orders (2014) pose production delay risks. **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
 
+---
