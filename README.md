@@ -4,8 +4,6 @@
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 
----
-
 <p align="center">
   <img src="Images/main_banner.jpg" width="100%">
 </p>
