@@ -416,45 +416,7 @@ The store should check with suppliers to make sure these orders arrive on time, 
 
 ---
 
-## 🗂️ Project Structure
-
-```text
-Bicycle_Manufacturer_Performance_Analysis-main/
-├── Images/                             # Screenshots of each query's result
-│   ├── main_banner.jpg
-│   ├── Query_01_Output.jpg
-│   ├── Query_06_Output.jpg
-│   ├── Query_2_Output.jpg
-│   ├── Query_3_Output.jpg
-│   ├── Query_4_Output.jpg
-│   ├── Query_5_Output.jpg
-│   ├── Query_7_Output.jpg
-│   └── Query_8_Output.jpg
-├── SQL_Queries/                        # SQL source files for each question
-│   ├── Q1 Sales Volume L12M.sql
-│   ├── Q2 YoY Growth Rate by Category.sql
-│   ├── Q3 Top Territories by Year.sql
-│   ├── Q4 Seasonal Discount Efficiency.sql
-│   ├── Q5 Cohort Retention Rate.sql
-│   ├── Q6 Stock Trend MoM.sql
-│   ├── Q7 Stock-to-Sales Ratio.sql
-│   └── Q8 Pending Orders Breakdown.sql
-└── README.md
-```
-
----
-
-## 🚀 Setup Instructions
-
-To run these queries in **Google BigQuery**:
-
-1. ☁️ **Set up a Google Cloud Platform (GCP) account:** Create one if you don't have it yet, and enable the BigQuery API.
-2. 📥 **Load the dataset:** Download the AdventureWorks CSV exports from [this public source](https://github.com/lorint/AdventureWorks-for-Postgres) or equivalent. Create a dataset named `adventureworks2019` in your BigQuery project and upload the required tables (`SalesOrderDetail`, `SalesOrderHeader`, `Product`, `WorkOrder`, etc.).
-3. 📂 **Open BigQuery Console:**
-   - Go to [Google Cloud Console - BigQuery](https://console.cloud.google.com/bigquery)
-   - Create a new Google Cloud Project if needed
-4. ▶️ **Run the queries:** Open the BigQuery console, copy each `.sql` file's content from the `SQL_Queries/` folder, and make sure your project context matches the dataset path before running.
-
+Key Finding
 
 
 
