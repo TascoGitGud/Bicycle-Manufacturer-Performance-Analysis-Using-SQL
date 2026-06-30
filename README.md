@@ -399,36 +399,27 @@ $9.27M in 224 pending purchase orders (2014). Establish supplier SLA monitoring 
 
 ## 🎯 Key Findings
 
-**1. Revenue Concentration:** 
-- Road Bikes dominates sales ($2.1M in March 2014), but only 3 product categories (Road, Mountain, Touring Bikes) generate ~80% of revenue.
-- **Action:** Diversify product portfolio to reduce dependency.
- 
-**2. Fast-Growing Segments:** 
-- Mountain Frames (+510%), Socks (+421%), and Road Frames (+389%) show explosive growth. 
-- **Action:** Increase production capacity and marketing budget immediately.
- 
-**3. Territorial Dominance:** 
-- Territory 4 is 4x stronger than others (3,238→11,632 orders, 2011-2014).
-- **Action:** Investigate success factors and replicate in underperforming territories.
- 
-**4. Discount Inefficiency:** 
-- Only Helmets receive seasonal discounts ($828→$1,606), but profitability impact unclear.
-- **Action:** Conduct ROI analysis before expanding discount programs.
- 
-**5. Customer Retention Crisis:** 
-- 96% of 2014 customers never returned (2,076→78 by month 2). Seasonal uptick at month 3 suggests opportunity.
-- **Action:** Launch re-engagement campaigns timed to seasonal patterns.
- 
-**6. Poor Inventory Planning:** 
-- Stock surges (HL Mountain Frame: 5→59 units) indicate reactive restocking, not demand forecasting.
-- **Action:** Implement predictive ordering system to avoid stock-outs.
- 
-**7. Excess Stock Levels:** 
-- Stock-to-sales ratio >20x for slow-moving frames (27 units in stock, 1 sold).
-- **Action:** Free up $M+ in working capital by reducing overstock.
- 
-**8. Supply Chain Risk:** 
-- $9.27M in 224 pending purchase orders (2014) pose production delay risks.
-- **Action:** Establish supplier SLA monitoring to prevent pipeline breaks.
+### 1. Commercial & Growth Strategy
+
+*   **High Revenue Concentration:** Just 3 categories (Road, Mountain, and Touring Bikes) generate **~80% of total revenue**, with Road Bikes dominating at $2.1M in March 2014 alone.
+    *   *Action:* Safeguard the supply chain for these core drivers while selectively diversifying the product portfolio to reduce dependency risks.
+*   **Explosive Demand Segments:** Mountain Frames (+510% YoY), Socks (+421% YoY), and Road Frames (+389% YoY) are showing massive momentum.
+    *   *Action:* Immediately scale up production capacity and allocate aggressive marketing budgets to capture this market surge.
+*   **Regional Powerhouse:** Territory 4 drives **4x more order volume** than any other region from 2011 to 2014.
+    *   *Action:* Audit Territory 4’s local strategies (pricing, distribution, or sales execution) and replicate that playbook across underperforming territories.
+
+### 2. Inventory & Supply Chain Optimization
+
+*   **Capital Tied Up in Excess Stock:** The Stock-to-Sales ratio is critically high at **>20x** for slow-moving items (e.g., *HL Mountain Frame Black* holding 27 units in stock with only 1 sold).
+    *   *Action:* Implement dynamic demand forecasting instead of reactive restocking to liquidate slow-moving inventory and free up **$M+ in trapped working capital**.
+*   **Procurement & Pipeline Risks:** There is a staggering **$9.27M locked in 224 pending purchase orders** in 2014.
+    *   *Action:* Establish strict supplier SLA monitoring and automated follow-up protocols to prevent severe production bottlenecks and secure the cash flow pipeline.
+
+### 3. Customer Retention & Promotion Efficiency
+
+*   **Retention Alarm:** A massive **96% of 2014 customers never returned** after their first purchase (crashing from 2,076 to just 78 active customers by Month 2).
+    *   *Action:* Shift budget away from low-impact seasonal discounts (currently only utilized by Helmets with unproven ROI) and invest heavily in a dedicated CRM retention system.
+*   **The "Month 3" Opportunity:** The cohort analysis flags a slight seasonal uptick in customer re-engagement exactly at **Month 3 (M-3)**.
+    *   *Action:* Launch automated email marketing and personalized loyalty rewards timed precisely at the 90-day mark to intercept churning users when they are most likely to re-engage.
  
 ---
